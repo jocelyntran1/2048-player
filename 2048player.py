@@ -1,12 +1,9 @@
 import pyautogui
 import time 
- 
+import webbrowser
+
 def play2048(keys_combination):
-    pyautogui.hotkey('winleft', '4');
-    time.sleep(3);
-    pyautogui.hotkey('ctrl', 't')
-    pyautogui.typewrite('https://gabrielecirulli.github.io/2048/', interval = 0.2);
-    pyautogui.press('enter')
+    webbrowser.open('https://gabrielecirulli.github.io/2048/', new=2) 
     time.sleep(3)
     while True:
         for key in keys_combination:
